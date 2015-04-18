@@ -14,7 +14,7 @@ camera.position.y = 75;
 var controls = new THREE.VRControls(camera);
 var effect = new THREE.VREffect(renderer);
 effect.setSize(window.innerWidth, window.innerHeight);
-var vrmgr = new WebVRManager(effect);
+var vrmgr = new WebVRManager(renderer, effect);
 
 //////////////////////////////////////////////////////
 // CONVERT TO 2.5D SCENE
@@ -27,7 +27,7 @@ loader.installPlugin(createjs.Sound);
 loader.addEventListener("complete", handleComplete);
 //createjs.Sound.alternateExtensions = ["ogg"];
 
-function handleComplete() {
+function handleComplete(){
 
 	root = new lib.act_i_canvas();
 	root.isSprite = true;
@@ -60,7 +60,8 @@ function handleComplete() {
 	setTimeout(function(){
 		window.musicInstance.play();
 		animate();
-	},100);
+		document.getElementById("loading").style.display = "none";
+	},1000);
 
 }
 
@@ -161,7 +162,7 @@ function playSound(){}
 // Request animation frame loop function
 function animate() {
 
-	stats.begin();
+	//stats.begin();
 
 	// Animate CreateJS
 	if(!window.ANIMATION_OVER && window.musicInstance){
@@ -191,7 +192,7 @@ function animate() {
 	effect.render(scene, camera);
 
 	// End
-	stats.end();
+	//stats.end();
 	requestAnimationFrame(animate);
 
 }
@@ -217,12 +218,14 @@ function onWindowResize() {
 }
 window.addEventListener('resize', onWindowResize, false);
 
+/*
 var stats = new Stats();
 stats.setMode(0); // 0: fps, 1: ms
 stats.domElement.style.position = 'absolute';
 stats.domElement.style.left = '0px';
 stats.domElement.style.top = '0px';
 document.body.appendChild( stats.domElement );
+*/
 
 
 

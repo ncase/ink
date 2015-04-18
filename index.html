@@ -1,40 +1,46 @@
-<!DOCTYPE html>
+<!doctype>
 <html>
 <head>
-    <title>I AM INK - a VR short animation</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <style>
-    body {
-        background-color: #000;
-        margin:0; padding:0;
-        overflow: hidden;
-    }
-    </style>
+
+	<!-- Title & Favicon -->
+	<title>I AM INK</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="I AM INK">
+	<meta itemprop="description" content="A drawing comes to life, and draws its own life.">
+	<meta itemprop="image" content="http://ncase.me/ink/thumbnail.png">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="I AM INK">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://ncase.me/ink/">
+	<meta property="og:image" content="http://ncase.me/ink/thumbnail.png">
+	<meta property="og:description" content="A drawing comes to life, and draws its own life.">
+	<meta property="og:site_name" content="I AM INK">
+
 </head>
-    <body></body>
+<body>
+
+<div id="content">
+
+	<iframe src="https://player.vimeo.com/video/124081385" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+	<div style="text-align: center; margin-top: 25px; font-weight: 100;">
+		<a href="/play" style="font-size: 47px;">WATCH I AM INK</a>
+		<br>
+		<span style="color: #666; font-size:18px">
+			works in modern browsers &amp; google cardboard
+			<br>
+			<br>
+			<b>on desktop?</b> move mouse to look around
+			<br>
+			<b>on mobile?</b> move phone to look around
+		</span>
+	</div>
+
+</div>
+
+</body>
 </html>
-
-<!-- Include ALL of them Web VR shenanigans -->
-<script src="js/three.min.js"></script>
-<script src="js/VRControls.js"></script>
-<script src="js/VREffect.js"></script>
-<script src="js/webvr-polyfill.js"></script>
-<script src="js/webvr-manager.js"></script>
-<script src="js/stats.min.js"></script>
-
-<!-- Create JS -->
-<script src="js/easeljs-0.7.0.min.js"></script>
-<script src="js/tweenjs-0.5.0.min.js"></script>
-<script src="js/movieclip-0.7.0.min.js"></script>
-<script src="js/preloadjs-0.4.0.min.js"></script>
-<script src="js/soundjs-0.5.0.min.js"></script>
-
-<!-- Our custom library -->
-<script src="animation/scripts/CanvasSprite.js"></script>
-
-<!-- CreateJS scenes -->
-<script src="animation/act_i_canvas.js"></script>
-
-<!-- Let's get started -->
-<script src="animation/main.js"></script>
-

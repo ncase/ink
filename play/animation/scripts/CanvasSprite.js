@@ -21,7 +21,7 @@ function CanvasSprite(mc){
 	self.bounds = mc.nominalBounds;
 
 	// SCALE
-	self.resolution = 4;
+	self.resolution = 3;
 
 	// Cache & config
     self.drawn = false;
